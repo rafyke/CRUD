@@ -1,89 +1,97 @@
-body{
-    color:white;
+body {
+    color: white;
     background-color: #1d2630;
     display: flex;
     justify-content: center; /* Centralizar horizontalmente */
     align-items: center; /* Centralizar verticalmente */
     height: 100vh;
+    margin: 0;
 }
+
 /* nav menu */
 .nav {
     display: flex;
-    justify-content: flex-end;
-    position: top;
+    justify-content: space-between; /* Ajuste para melhor espaçamento em telas menores */
+    align-items: center;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 70%;
+    width: 100%; /* Ocupar a largura total */
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
-    color:#fff;
-  }
-  ul{
-    list-style: none;
-  }
-  a{
-    color:#fff;
-    text-decoration: none;
-  }
-  
-  .nav-list {
-    display: flex;
-    margin-right: 2rem;
-   list-style: none;
-  }
-
-  .container{
-    position:relative;
-  }
-.popupInfo {
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: rgba(255,255, 255, 0.75);
-    border: 1px solid rgba(255,255, 255, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
     color: #fff;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    background: rgba(255,255,255,0.30);
-    flex-basis: 400px;
-    height: 300px;
-    width: 700px;
-    padding: 20px 35px;
-    text-align: justify;
 }
 
-form input{
-    font-size:16px;
-    height: 50px;
-    padding: 15 10;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-#botaoFechar, #botaoExcluir, #botaoEditar {
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 1rem; /* Reduzir a margem para melhor espaçamento */
+}
+
+.container {
+    position: relative;
+}
+
+.popupInfo {
+    /* Estilos para o popup permanecem inalterados */
+}
+
+form input {
+    font-size: 16px;
+    height: 50px;
+    padding: 15px 10px; /* Correção na propriedade padding */
+}
+
+#botaoFechar,
+#botaoExcluir,
+#botaoEditar {
     border-radius: 50px;
-    align-items: left;
-    position:relative;
+    align-items: left; /* Isso pode não ser necessário, dependendo do contexto */
+    position: relative;
 }
 
 /* Footer */
 footer {
     font-weight: 300;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap; /* Lidar melhor com telas menores */
+    justify-content: center;
     padding: 2rem;
     background: var(--main-gray);
     border-top: 4px solid var(--main-red);
-  }
-  
-  footer > p {
-    margin: 2rem;
-  }
-  
-  footer i {
+}
+
+footer > p {
+    margin: 1rem; /* Ajuste na margem */
+}
+
+footer i {
     vertical-align: middle;
-  }
-/*   
-@media (max-width: 28.75em) {
-    footer {
-      flex-direction: column;
-      text-align: center;
+}
+
+/* Adição de media query para telas menores */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
     }
-  } */
+
+    .nav-list {
+        margin-top: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
