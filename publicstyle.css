@@ -67,8 +67,7 @@ footer {
     flex-wrap: wrap; /* Lidar melhor com telas menores */
     justify-content: center;
     padding: 2rem;
-    background: var(--main-gray);
-    border-top: 4px solid var(--main-red);
+    border-top: 4px solid;
 }
 
 footer > p {
