@@ -69,7 +69,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
-    border-top: 2px solid;
+    
 }
 
 footer > p {
@@ -89,6 +89,15 @@ footer i {
 
     .nav-list {
         margin-top: 1rem;
+    }
+
+    .popupInfo {
+        width: 90%; /* Ajuste a largura do popup para melhor adaptação em telas menores */
+        max-width: 400px; /* Defina um valor máximo para evitar que o popup fique muito largo */
+    }
+
+    form input {
+        width: 100%; /* Garanta que os inputs ocupem a largura total */
     }
 
     footer {
