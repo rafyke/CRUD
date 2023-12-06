@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>LOGIN - ADM</title>
+</head>
+
+<body>
+    <div class="menu">
+          <!-- START NAV -->
+
+    <nav id="navbar" class="nav">
+        <ul class="nav-list">
+            <li>
+                <a href="index.htm">Voltar</a>
+              </li>
+          </li>
+        </ul>
+      </nav>
+  
+      <!-- END NAV -->
+  
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1><center> LOGIN - AMIGO OCULTO</center></h1>
+        </div>
+        <hr>
+        <div class="popupInfo">
+            <button class="btn btn-danger btn-sm close" onclick="fechar()" type="button" id="botaoFechar">X</button>
+
+            <h1><center>  Informe seu usuário, e-mail e senha para editar a lista de amigo oculto. </center></h1>
+        </div>
+        <div class="form-group">
+            <fieldset>
+                <form action="post" id="formularioLogin" class="row justify-content-center col-8 mb-5">
+
+                    <label for="name">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Insira seu usuário"  required><br><br>
+            
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" placeholder="Insira a senha cadastrada"  required> </input>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="emailAdm" name="email" placeholder="Insira seu e-mail, para cópia "  required>
+            
+            <br>
+                <button class="btn btn-success add-btn" onclick="editRow(newRow)" type="button" id="botaoEditar">Editar Lista</button><br>
+            </form>
+            </fieldset> 
+            <div class="col-8 mt-8">
+                <table id="tbFormulario" class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                    <div class="col-8 mb-3"><th>Número da Sorte </th></div>
+                    <div class="col-8 mb-3"><th>Nome</th></div>
+                    <div class="col-8 mb-3"><th>Sobrenome</th></div>
+                    <div class="col-8 mb-3"><th>Celular</th></div>
+                    <div class="col-8 mb-3"><th>E-mail</th></div>
+                    <div class="col-8 mb-3"><th>Nascimento</th></div>
+                    <div class="col-8 mb-3"><th>Likes</th></div>
+                    <div class="col-8 mb-3"><th>Dislikes</th></div>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr id="primeiralinha">
+                        <td id="codigo"></td>
+                        <td id="name"></td>
+                        <td id="surname"></td>
+                        <td id="number"></td>
+                        <td id="email"></td>
+                        <td id="birthday"></td>
+                        <td id="like"></td>
+                        <td id="dislike"></td>
+                        <td id="botoes">
+                            <button class="btn btn-warning btn-sm edit"  onclick="editRow(newRow)" type="button" id="botaoEditar"> Editar </button>
+                            <button class="btn btn-danger btn-sm delete" id="botaoExcluir" type="button" onclick="Excluir(newRow)">Excluir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+    </div>
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+   
+    <script src="script.js"></script>
+    <script src="scriptAdm"></script>
+</body>
+
+</html>

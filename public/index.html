@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Meu Primeiro CRUD</title>
+</head>
+
+<body><div class="header">
+    <div class="menu">
+          <!-- START NAV -->
+
+    <nav id="navbar" class="nav">
+        <ul class="nav-list">
+            <li>
+                <h2><a href="adm.htm"><b>  Login  </b>  </a></h2>
+              </li>
+          <li>
+            <h2><a href="#tbFormulario">|    Lista</a>  </h2>
+          </li>
+          <li>
+            <h2><a href="#contact">|     Contato</a>   </h2>
+          </li>
+        </ul>
+      </nav>
+  
+      <!-- END NAV -->
+  
+    </div>
+    <div class="container">
+        
+            
+            <h1>Meu Primeiro CRUD - AMIGO OCULTO</h1>
+        </div>
+        <hr>
+        <div class="popupInfo">
+            <button class="btn btn-danger btn-sm close" onclick="fechar()" type="button" id="botaoFechar">X</button>
+
+            <p>         Projeto desenvolvido como prática didática em HTML,CSS e Javascript, utilizando os frameworks
+               <b>Bootstrap</b> pela praticidade na interface responsiva e <b>EMAILJS</b> para envio de e-mails diretamente do
+                cliente.
+            </p>
+            <p>  Um <b>CRUD (Create, Read, Update, Delete)</b> é uma abreviação que representa as operações básicas de um sistema
+                de gerenciamento de banco de dados. Ele é importante porque permite a criação, leitura, atualização e
+                exclusão de dados, formando a base para a funcionalidade completa de muitos aplicativos e sistemas.
+                O CRUD é essencial para a interação e manipulação eficiente dos dados. </p>
+        </div>
+        <div class="form-group">
+            <fieldset>
+                <form action="post" id="formulario" class="row justify-content-center col-8 mb-5">
+                    
+                    <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Insira seu nome"  required><br><br>
+            
+                <label for="surname">Sobrenome:</label>
+                <input type="text" id="surname" name="surname" class="form-control" placeholder="Insira seu sobrenome"  required><br><br>
+            
+                <label for="number">Celular:</label>
+                <input type="tel" id="number" name="number" class="form-control"placeholder="Insira seu número de celular"> <br><br>
+            
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Insira seu e-mail"  required>
+            
+                <label for="birthday">Data de nascimento:</label>
+                <input type="date" id="birthday" name="birthday">
+
+                <label for="like">O que gosta:</label>
+                <textarea type="text" id="like" name="like" placeholder="Insira o que gostaria de ganhar"  required> </textarea>
+                <br>
+                
+                <label for="dislike">O que NÃO gosta:</label>
+                <textarea id="dislike" name="dislike" placeholder="Insira o que NÃO gostaria de ganhar"  required> </textarea>
+            <br>
+                <input class="btn btn-success add-btn" type="button" value="Enviar" id="botaoEnviar"><br>
+            </form>
+            </fieldset> 
+            <div class="col-8 mt-8">
+                <table id="tbFormulario" class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                    <div class="col-8 mb-3"><th>Número da Sorte </th></div>
+                    <div class="col-8 mb-3"><th>Nome</th></div>
+                    <div class="col-8 mb-3"><th>Sobrenome</th></div>
+                    <div class="col-8 mb-3"><th>Celular</th></div>
+                    <div class="col-8 mb-3"><th>E-mail</th></div>
+                    <div class="col-8 mb-3"><th>Nascimento</th></div>
+                    <div class="col-8 mb-3"><th>Likes</th></div>
+                    <div class="col-8 mb-3"><th>Dislikes</th></div>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr id="primeiralinha">
+                        <td id="codigo"></td>
+                        <td id="name"></td>
+                        <td id="surname"></td>
+                        <td id="number"></td>
+                        <td id="email"></td>
+                        <td id="birthday"></td>
+                        <td id="like"></td>
+                        <td id="dislike"></td>
+                        <td id="botoes">
+                            <button class="btn btn-warning btn-sm edit"  onclick="editRow(newRow)" type="button" id="botaoEditar"> Editar </button>
+                            <button class="btn btn-danger btn-sm delete" id="botaoExcluir" type="button" onclick="Excluir(newRow)">Excluir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+    </div>
+    <!-- START FOOTER SECTION -->
+
+    <footer>
+        <center><p> Desenvolvido por Rafaela Costa. <i>2023</i>
+        &copy; 
+<a href="https://www.github.com/rafyke" target="_blank">
+   Github <i class="fab fa-free-code-camp"></i
+></a>
+</p></center>
+       
+      </footer>
+  
+      <!-- END FOOTER SECTION -->
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
