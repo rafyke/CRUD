@@ -1,12 +1,11 @@
-body {
+body {     
+     margin-left: 5vh;
     color: white;
     background-color: #1d2630;
-    display: flex;
-    flex-direction: column; /* Alterado para coluna para melhorar a visualização em dispositivos móveis */
-    align-items: center; /* Centralizar horizontalmente */
-    justify-content: center; /* Centralizar verticalmente */
+    align-items: center;
+    justify-content: center;
     height: 100vh;
-    margin: 0;
+    
 }
 
 /* nav menu */
@@ -14,14 +13,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
     color: #fff;
-    padding: 1rem; /* Adicionado para espaçamento interno */
+    padding: 1rem 2rem; /* Adapte o padding conforme necessário */
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+    }
 }
 
 ul {
@@ -45,13 +52,8 @@ a {
 }
 
 .popupInfo {
-    /* Estilos para o popup permanecem inalterados */
-}
-
-form input {
-    font-size: 16px;
-    height: 50px;
-    padding: 15px 10px;
+    width: 90%;
+    max-width: 100vh;
 }
 
 #botaoFechar,
@@ -69,7 +71,6 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
-    
 }
 
 footer > p {
@@ -82,22 +83,17 @@ footer i {
 
 /* Adição de media query para telas menores */
 @media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .nav-list {
         margin-top: 1rem;
     }
 
     .popupInfo {
-        width: 90%; /* Ajuste a largura do popup para melhor adaptação em telas menores */
-        max-width: 400px; /* Defina um valor máximo para evitar que o popup fique muito largo */
+        width: 90%;
+        max-width: 100vh;
     }
 
     form input {
-        width: 100%; /* Garanta que os inputs ocupem a largura total */
+        width: 80%;
     }
 
     footer {
