@@ -52,9 +52,22 @@ a {
 }
 
 .popupInfo {
-    width: 90%;
+    width: 80%;
     max-width: 100vh;
+    outline: 3px solid rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255,255, 255, 0.95);
+    border: 1px solid rgba(255,255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color:#fff;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.20);
+    border: 1px solid rgba(255,255, 255, 0.34);
 }
+
 
 #botaoFechar,
 #botaoExcluir,
@@ -87,10 +100,11 @@ footer i {
         margin-top: 1rem;
     }
 
-    .popupInfo {
-        width: 90%;
+    
+     .popupInfo {
+        width: 80%;
         max-width: 100vh;
-    }
+    } 
 
     form input {
         width: 80%;
